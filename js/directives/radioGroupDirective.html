@@ -1,0 +1,9 @@
+<button type="button"
+        ng-class="buttonClass || 'btn btn-default'"
+        ng-click="onButtonClick(option.value)"
+        ng-model="ngModel"
+        ng-repeat="option in options"
+        mn-repeat-done="button_created"
+        mn-repeat-done-arg="option.value"
+        value="{{option.value}}">{{option.label}}
+</button>

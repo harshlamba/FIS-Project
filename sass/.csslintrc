@@ -1,0 +1,12 @@
+{
+  "compatible-vendor-prefixes": false,
+  "important": false,
+  "fallback-colors": false,
+  "unique-headings": false,
+  "box-sizing": false,
+  "outline-none" : false,
+  "universal-selector" : false,
+  "font-sizes" : false,
+  "overqualified-elements" : false,
+  "known-properties": false
+ }

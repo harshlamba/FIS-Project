@@ -1,0 +1,11 @@
+{
+  "name": "Extend",
+  "dependencies": {},
+  "devDependencies": {
+    "normalize-css": "~3.0.0",
+    "bourbon": "3.2.0-beta.2",
+    "neat": "v1.6.0.pre",
+    "modular-scale": "~2.0.4",
+    "bootstrap-sass": "twbs/bootstrap-sass#~3.1.1"
+  }
+}

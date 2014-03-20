@@ -1,0 +1,25 @@
+{
+  "name": "Extend",
+  "version": "0.0.1",
+  "description": "A sample app build on Extend",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ThreePillarGlobal/Extend.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-watch": "^0.5.3",
+    "grunt-contrib-connect": "^0.7.1",
+    "load-grunt-tasks": "^0.4.0",
+    "grunt-csscomb": "^2.0.1",
+    "grunt-contrib-sass": "^0.7.2",
+    "grunt-contrib-csslint": "^0.2.0",
+    "grunt-contrib-cssmin": "^0.9.0",
+    "grunt-contrib-concat": "^0.3.0",
+    "gulp-util": "^2.2.14",
+    "gulp": "^3.5.5",
+    "bootcamp": "^1.1.4",
+    "grunt-open": "^0.2.3"
+  }
+}

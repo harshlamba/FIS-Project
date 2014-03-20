@@ -1,0 +1,7 @@
+# Folders to ignore
+node_modules
+build
+bower_components
+.sass-cache
+Gemfile.lock
+npm-debug.log
