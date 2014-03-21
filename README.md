@@ -23,10 +23,8 @@ Once you have Node & NPM installed you can run the following to install Bower & 
     $ npm install -g grunt-cli		# installs grunt command line interface globally
     $ npm update && bower update	# Download dependent files for the development
 
-
-### Dependency Management & Install
-
 ##Task list
 
-	1. build : This task includes compilation of sass, can combine different css file together and will minify the css to destination folder.
+	1. build : This task includes compilation of sass, can combine different css file together and 
+			   will minify the css to destination folder.
 	2. watch-sass :
