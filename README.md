@@ -27,4 +27,4 @@ Once you have Node & NPM installed you can run the following to install Bower & 
 
 	1. build : This task includes compilation of sass, can combine different css file together and 
 			   will minify the css to destination folder.
-	2. watch-sass :
+	2. watch-sass : This is used to watch over the sass file while developement.
