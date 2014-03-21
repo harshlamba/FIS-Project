@@ -38,7 +38,7 @@ module.exports = function (grunt) {
                   files: 'sass/**/*.scss',
                   tasks: watchTasks,
                   options: {
-				      livereload: true,
+				        livereload: true,
 				    }
                 }
             },
@@ -92,6 +92,9 @@ module.exports = function (grunt) {
             },
 
             concat: {
+                options:{
+                    separator:';'
+                },
               css: {
                 src: ['lib/normalize-css/normalize-css', 'sass/base/print.css', 'build/css/app.css'],
                 dest: 'build/css/app.css'

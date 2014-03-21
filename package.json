@@ -1,10 +1,10 @@
 {
-  "name": "Extend",
+  "name": "FIS-project",
   "version": "0.0.1",
-  "description": "A sample app build on Extend",
+  "description": "A sample app",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ThreePillarGlobal/Extend.git"
+    "url": "https://github.com/harshlamba/FIS-Project.git"
   },
   "dependencies": {},
   "devDependencies": {
