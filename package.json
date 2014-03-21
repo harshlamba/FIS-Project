@@ -20,6 +20,7 @@
     "gulp-util": "^2.2.14",
     "gulp": "^3.5.5",
     "bootcamp": "^1.1.4",
-    "grunt-open": "^0.2.3"
+    "grunt-open": "^0.2.3",
+    "grunt-concat-sourcemap": "~0.4.1"
   }
 }

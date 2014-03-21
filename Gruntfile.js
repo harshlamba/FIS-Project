@@ -6,12 +6,12 @@ module.exports = function (grunt) {
                 'sass:compile',        
                 'csscomb:build',
                 //'csslint:build',
-                //'concat:css',
+                'concat:css',
                 'cssmin'
             ],
 
         watchTasks = [
-                'sass:compile'
+                'watch:styles'
             ],
 
         serverTasks = [
@@ -34,12 +34,12 @@ module.exports = function (grunt) {
             },
 
             watch: {
-                live: {
-                  files: 'sass/**/*.scss',
-                  tasks: watchTasks,
-                  options: {
-				        livereload: true,
-				    }
+                styles: {
+                    files: ['sass/**/*.scss'],
+                    tasks: ['sass:compile'],
+                    options: {
+                        nospawn: true
+                    }
                 }
             },
 
@@ -50,30 +50,20 @@ module.exports = function (grunt) {
 		      }
 		    },
 
-            //sass: {
-            //  compile: {
-            //    options: {
-            //      sourcemap: true,
-            //      loadPath: ['bower_components'
-            //                , '../extend/Math'
-            //                , '../extend/Helpers'
-            //                , '../extend/Typography'
-            //                , '../extend/Color']
-            //    },
-            //    files: {
-            //      'build/css/app.css': 'sass/app.scss'
-            //    }
-            //  }
-            //},
-
-		    sass: {
-		        compile: {
-		            files: {
-		                'build/css/app.css': 'bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap.scss'
-		            }
-		        }
-		    },
-
+            sass: {
+              compile: {
+                options: {
+                  sourcemap: true,
+                  loadPath: ['bower_components'
+                            , 'sass/bootstrap'
+                            , 'sass']
+                },
+                files: {
+                    'build/css/app.css': 'sass/bootstrap.scss'
+                }
+              }
+            },
+            
             csscomb: {
               build: {
                 files: {
@@ -90,13 +80,13 @@ module.exports = function (grunt) {
                 src: ['build/css/app.css']
               }
             },
-
+            
             concat: {
                 options:{
                     separator:';'
                 },
               css: {
-                src: ['lib/normalize-css/normalize-css', 'sass/base/print.css', 'build/css/app.css'],
+                  src: ['build/css/app.css.map', 'build/css/app.css'],
                 dest: 'build/css/app.css'
               }
             },
@@ -115,10 +105,11 @@ module.exports = function (grunt) {
 
     // These plugins provide necessary tasks.
     require('load-grunt-tasks')(grunt, { scope: 'devDependencies' });
-
+    
     grunt.initConfig(config);
 
     grunt.registerTask('build', buildTasks);
+    grunt.registerTask('watch-sass', watchTasks);
   	grunt.registerTask('server', serverTasks);
 
 }
