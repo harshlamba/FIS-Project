@@ -1,7 +1,6 @@
 module.exports = function (grunt) {
 
     var
-
         buildTasks = [
                 'sass:compile',        
                 'csscomb:build',
@@ -20,6 +19,7 @@ module.exports = function (grunt) {
 				'watch'
         	],
 
+        //Configuration start start 
         config = {
             package: grunt.file.readJSON('package.json'),
 
@@ -33,6 +33,7 @@ module.exports = function (grunt) {
                 }
             },
 
+            //object for watch task
             watch: {
                 styles: {
                     files: ['sass/**/*.scss'],
@@ -50,6 +51,7 @@ module.exports = function (grunt) {
 		      }
 		    },
 
+            //Object for sass compile
             sass: {
               compile: {
                 options: {
@@ -64,6 +66,7 @@ module.exports = function (grunt) {
               }
             },
             
+            //Object to combine css
             csscomb: {
               build: {
                 files: {
@@ -72,6 +75,7 @@ module.exports = function (grunt) {
               }
             },
 
+            //Object for linting in css
             csslint: {
               options: {
                 csslintrc: 'sass/.csslintrc'
@@ -81,6 +85,7 @@ module.exports = function (grunt) {
               }
             },
             
+            //Object to concatenate css or js files
             concat: {
                 options:{
                     separator:';'
@@ -91,6 +96,7 @@ module.exports = function (grunt) {
               }
             },
 
+            //Object to minify css or js file
             cssmin: {
               compress: {
                 options: {
@@ -108,7 +114,9 @@ module.exports = function (grunt) {
     
     grunt.initConfig(config);
 
-    grunt.registerTask('build', buildTasks);
+    //HOW TO USE THESE TASK IN GRUNT
+    //Syntax: $ Grunt build or watch-sass
+    grunt.registerTask('build', buildTasks);        
     grunt.registerTask('watch-sass', watchTasks);
   	grunt.registerTask('server', serverTasks);
 
