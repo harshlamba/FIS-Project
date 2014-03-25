@@ -1,0 +1,32 @@
+<div class="col-lg-2">
+</div>
+<div class="col-lg-8 table-responsive">
+ 	<h3>List of Students</h3>
+    <label>Search
+    <!--input type="text" ng-model="filter.name" placeholder="search text" /-->
+    <input type="text" ng-model="search" placeholder="search text" />
+    </label>
+	<table class="table table-bordered table-striped">
+	    <thead>
+			<tr>
+				<th>S.No</th>            				
+                <th> <a ng-click="sort='name'; reverse=!reverse">Name<span class="glyphicon glyphicon-sort"></span></a></th>
+                <th> <a ng-click="sort='city'; reverse=!reverse">city <span class="glyphicon glyphicon-sort"></span></a></th>
+                <th>Update Action</th>
+                <th>Delete Action </th>
+			</tr>
+		</thead>
+	    <tbody>
+		<tr ng-repeat="personname in person | filter:search | orderBy:sort:reverse" >
+            <td>{{$index + 1}}</td> <!-- $index tells at which turn of loop we are at -->
+           <td>{{personname.name}}</td>
+           <td>{{personname.city}}</td>
+           <td><a href="#editperson/{{$index}}">Update Student</a></td>
+           <td><button ng-click="deletePerson($index)" class="btn btn-default">Remove</button></td>
+		</tr>
+	</tbody>
+	</table>
+</div>
+<div class="col-lg-2">
+
+</div>

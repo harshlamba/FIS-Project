@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html lang="en" ng-app="taskManager">
+<head>
+  <meta charset="utf-8">
+  <title>My HTML File</title>
+  <link href="build/css/app.css" rel="stylesheet">
+  <link href="build/css/app1.css" rel="stylesheet">
+</head>
+<body>
+<div class="header">
+  <div class="navbar-header">
+    <h2>UX - Exercise</h2>
+  </div>
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#/tasklist">List</a></li>
+      <li><a href="#/addTask">Add item</a></li>
+    </ul>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div ng-view>
+    	<!-- placeholder for partial view -->
+    </div>
+  </div>
+</div>
+</div>
+ <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+ <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+ <script src="bower-components/bootstrap/dist/js/bootstrap.min.js"></script> 
+ <script src="js/config/config.js"></script> 
+ <script src="js/services/services.js"></script> 
+ <script src="js/controllers/appController.js"></script> 
+</body>
+</html>

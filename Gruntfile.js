@@ -56,7 +56,7 @@ module.exports = function (grunt) {
               compile: {
                 options: {
                   sourcemap: true,
-                  loadPath: ['bower_components'
+                  loadPath: ['bower-components'
                             , 'sass/bootstrap'
                             , 'sass']
                 },
